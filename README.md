@@ -5,7 +5,7 @@ It's my vim configuration. This setup is focused on C++, Python and Front-End la
 
 First, remove your previous configurations, maybe you want to make a backup:
 ```
-rm -r ~/.vim ~/.vimrc ~/.viminfo
+rm -rf ~/.vim ~/.vimrc ~/.viminfo
 ```
 
 So, clone the repo:
