@@ -170,4 +170,4 @@ let g:project_use_nerdtree = 0
 set rtp+=~/.vim/bundle/vim-project/
 call project#rc()
 
-source .vimprojects
+source ~/.vim/.vimprojects
