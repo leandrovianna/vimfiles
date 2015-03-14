@@ -90,18 +90,16 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""" OPÇÕES PARTICULARES PARA O EDITOR 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set t_Co=256
 syntax on
 set number
 set noai
-set t_Co=256
 set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-" set cul
-" colorscheme badwolf
-" set ruler
 set autoread
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" EasyMotion Configuration
