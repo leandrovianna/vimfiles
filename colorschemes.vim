@@ -4,8 +4,7 @@ Plugin 'benjaminwhite/Benokai'
 
 Plugin 'tomasr/molokai'
 
-" Plugin 'vim-scripts/Visual-Studio'
-Plugin 'Visual-Studio'
-
-" Plugin 'vim-scripts/BusyBee'
 Plugin 'BusyBee'
+" Plugin 'vim-scripts/BusyBee'
+
+Plugin 'nelstrom/vim-mac-classic-theme'
