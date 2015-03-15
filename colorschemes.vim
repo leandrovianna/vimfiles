@@ -8,3 +8,5 @@ Plugin 'BusyBee'
 " Plugin 'vim-scripts/BusyBee'
 
 Plugin 'nelstrom/vim-mac-classic-theme'
+
+Plugin 'wesQ3/wombat.vim'

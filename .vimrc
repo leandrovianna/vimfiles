@@ -27,11 +27,14 @@ syntax on
 set number
 set noai
 set autoindent
+set copyindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoread
+set nowrap
 colorscheme molokai
+set title
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" EasyMotion Configuration
