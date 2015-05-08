@@ -33,8 +33,8 @@ set shiftwidth=4
 set softtabstop=4
 set autoread
 set nowrap
-colorscheme molokai
 set title
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" EasyMotion Configuration
@@ -99,7 +99,7 @@ set  laststatus=2 " vim-airline status bar shows everytime
 
 """"""""""""""""""""""""""""""""""" vim-project config
 let g:project_enable_welcome = 0
-let g:project_use_nerdtree = 0
+let g:project_use_nerdtree = 1
 set rtp+=~/.vim/bundle/vim-project/
 call project#rc()
 

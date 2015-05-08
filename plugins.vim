@@ -67,3 +67,6 @@ Plugin 'https://github.com/gorodinskiy/vim-coloresque.git'
 
 " vim-project -- projects for vim
 Plugin 'amiorin/vim-project'
+
+" dart syntax highlighter plugin
+Plugin 'dart-lang/dart-vim-plugin'
