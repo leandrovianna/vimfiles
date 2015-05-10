@@ -70,3 +70,11 @@ Plugin 'amiorin/vim-project'
 
 " dart syntax highlighter plugin
 Plugin 'dart-lang/dart-vim-plugin'
+
+" dart code analyzer
+Plugin 'miyakogi/vim-dartanalyzer'
+
+" dependencies of dart analyzer
+Plugin 'Shougo/vimproc.vim'
+Plugin 'jceb/vim-hier'
+Plugin 'dannyob/quickfixstatus'
