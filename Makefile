@@ -16,3 +16,5 @@ install-vundle:
 install-plugins:
 	echo "Instalando os plugins no Vim usando o Vundle"
 	vim +PluginInstall +qall
+	cd ~/.vim/bundle/vimproc.vim 
+	make
