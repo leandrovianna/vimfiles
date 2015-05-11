@@ -1,6 +1,8 @@
 # vimfiles
 It's my vim configuration. This setup is focused on C++, Python and Front-End languages. Eventually, I will improve it.
 
+Change: Now I'm adding support for Dart and Go languages.
+
 # Installation
 
 First, remove your previous configurations, maybe you want to make a backup:

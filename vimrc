@@ -70,17 +70,6 @@ nmap <S-l> gt
 nmap <S-h> gT
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""" NERDTree Configuration
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map nt <plug>NERDTreeTabsToggle<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""" Markdown For HTML Generator Config
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Indicando um folha de estilo para impressão
-let b:VMEPstylesheet = '/home/leandro/.vim/print.css'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""" Syntastic Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
@@ -95,17 +84,9 @@ let g:syntastic_check_on_wq = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""" VIM-Arline Config 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set  laststatus=2 " vim-airline status bar shows everytime
-
-""""""""""""""""""""""""""""""""""" vim-project config
-let g:project_enable_welcome = 0
-let g:project_use_nerdtree = 1
-set rtp+=~/.vim/bundle/vim-project/
-call project#rc()
-
-source ~/.vim/vimprojects.vim
+set laststatus=2 " vim-airline status bar shows everytime
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""" Dart Analyzer Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:dartanalyzer_cmd = '/home/leandro/Documentos/Softwares/dart-sdk/bin/dartanalyzer'
+let g:dartanalyzer_cmd = '~/Documentos/Softwares/dart-sdk/bin/dartanalyzer'
