@@ -89,4 +89,4 @@ set laststatus=2 " vim-airline status bar shows everytime
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""" Dart Analyzer Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:dartanalyzer_cmd = '~/Documentos/Softwares/dart-sdk/bin/dartanalyzer'
+let g:dartanalyzer_cmd = '/home/leandro/Documentos/Softwares/dart-sdk/bin/dartanalyzer'
