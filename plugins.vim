@@ -10,11 +10,12 @@ Plugin 'kien/ctrlp.vim'
 " Syntastic -- syntax and errors checker for a lot of languages
 Plugin 'scrooloose/syntastic'
 
+" Note: I stopped with NERDTree, because it's horrible.
 " NERDTree -- very nice file browser
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 
 " NERDTree Tabs -- NERDTree in all tabs 
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'jistr/vim-nerdtree-tabs'
 
 " Vim Markdown support and align plugin tabular
 Plugin 'godlygeek/tabular'
@@ -59,14 +60,8 @@ Plugin 'tComment'
 " Surround.vim -- surround text with htmls elements
 Plugin 'surround.vim'
 
-" Command-T - manage and open files fast
-Plugin 'wincent/Command-T'
-
 " Vim-Colorsque - Highlight Colors in CSS
 Plugin 'https://github.com/gorodinskiy/vim-coloresque.git'
-
-" vim-project -- projects for vim
-Plugin 'amiorin/vim-project'
 
 " dart syntax highlighter plugin
 Plugin 'dart-lang/dart-vim-plugin'
