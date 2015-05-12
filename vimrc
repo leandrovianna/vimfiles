@@ -34,7 +34,9 @@ set softtabstop=4
 set autoread
 set nowrap
 set title
+set mouse=c
 colorscheme molokai
+autocmd BufEnter * silent! lcd %:p:h	" change the window local working directory for the actual file directory
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" EasyMotion Configuration
@@ -72,13 +74,9 @@ nmap <S-h> gT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""" Syntastic Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,3 +88,28 @@ set laststatus=2 " vim-airline status bar shows everytime
 """"""""""""""""""""""""""""""""""" Dart Analyzer Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:dartanalyzer_cmd = '/home/leandro/Documentos/Softwares/dart-sdk/bin/dartanalyzer'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""" Hotkeys para janelas no Vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" divide a janela horizontalmente 
+nmap <C-w>h <C-w>s 
+" divide a janela verticalmente
+" nmap <C-w>v <C-w>v
+command VW vs
+command HW sp
+
+"Better window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Open netrw in the same window
+nmap fe :e.<Enter>
+
+" Open/Close NERDTree with tabs
+nmap nt <plug>NERDTreeTabsToggle<CR>
+
+" paste text from out of vim
+map cp "+gP<Esc>

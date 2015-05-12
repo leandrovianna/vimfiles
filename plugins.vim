@@ -10,12 +10,20 @@ Plugin 'kien/ctrlp.vim'
 " Syntastic -- syntax and errors checker for a lot of languages
 Plugin 'scrooloose/syntastic'
 
-" Note: I stopped with NERDTree, because it's horrible.
 " NERDTree -- very nice file browser
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " NERDTree Tabs -- NERDTree in all tabs 
-" Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+" NERDTree git flags support
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" neocomplete -- autocomplete for vim
+Plugin 'Shougo/neocomplete.vim'
+
+" vim-pencil -- vim for prose
+Plugin 'reedes/vim-pencil'
 
 " Vim Markdown support and align plugin tabular
 Plugin 'godlygeek/tabular'
