@@ -6,7 +6,7 @@ link:
 
 install-deps:
 	echo "Instalando as dependencias (root)"
-	su -c "aptitude install build-essential git curl"
+	su -c "aptitude install build-essential git curl vim-gtk vim-nox"
 
 install-vundle:
 	echo "Instalando o gerenciador de plugins Vundle"
