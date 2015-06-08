@@ -81,3 +81,6 @@ Plugin 'miyakogi/vim-dartanalyzer'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'jceb/vim-hier'
 Plugin 'dannyob/quickfixstatus'
+
+" verun - plugin for execute cpp, c, python programs
+Plugin 'sollidsnake/verun'
