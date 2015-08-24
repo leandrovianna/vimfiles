@@ -84,3 +84,6 @@ Plugin 'dannyob/quickfixstatus'
 
 " verun - plugin for execute cpp, c, python programs
 Plugin 'sollidsnake/verun'
+
+" mru
+Plugin 'mru.vim'

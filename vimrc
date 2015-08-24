@@ -115,7 +115,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Open netrw in the same window
-nmap fe :e.<Enter>
+" nmap fe :e.<Enter>
 
 " Open/Close NERDTree with tabs
 nmap nt <plug>NERDTreeTabsToggle<CR>
@@ -211,3 +211,9 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""" NERDTree Configs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:nerdtree_tabs_autofind = 1
