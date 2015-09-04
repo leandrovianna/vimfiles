@@ -11,13 +11,13 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 
 " NERDTree -- very nice file browser
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 
 " NERDTree Tabs -- NERDTree in all tabs 
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'jistr/vim-nerdtree-tabs'
 
 " NERDTree git flags support
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " neocomplete -- autocomplete for vim
 Plugin 'Shougo/neocomplete.vim'

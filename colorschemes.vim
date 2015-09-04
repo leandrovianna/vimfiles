@@ -10,3 +10,5 @@ Plugin 'BusyBee'
 Plugin 'nelstrom/vim-mac-classic-theme'
 
 Plugin 'wesQ3/wombat.vim'
+
+Plugin 'romainl/Apprentice' 

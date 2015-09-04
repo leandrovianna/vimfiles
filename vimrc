@@ -36,9 +36,7 @@ set wrap
 set title
 set mouse=c
 colorscheme molokai
-autocmd BufEnter * silent! lcd %:p:h	" change the window local working directory for the actual file directory
-" set backspace
-set backspace=indent,eol,start
+" autocmd BufEnter * silent! lcd %:p:h	" change the window local working directory for the actual file directory
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" EasyMotion Configuration
@@ -113,9 +111,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" Open netrw in the same window
-" nmap fe :e.<Enter>
 
 " Open/Close NERDTree with tabs
 nmap nt <plug>NERDTreeTabsToggle<CR>
@@ -216,4 +211,9 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 """"""""""""""""""""""""""""""""""" NERDTree Configs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:nerdtree_tabs_open_on_gui_startup = 0
-let g:nerdtree_tabs_autofind = 1
+" let g:nerdtree_tabs_autofind = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""" VERun Configs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:VEMakeRun="main"
