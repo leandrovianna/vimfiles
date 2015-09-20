@@ -96,3 +96,6 @@ Plugin 'Shougo/vimshell.vim'
 
 " commands to only visual block selections
 Plugin 'vis'
+
+" move selections in visual block
+Plugin 'Mariappan/dragvisuals.vim'

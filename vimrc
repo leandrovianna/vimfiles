@@ -103,11 +103,11 @@ let g:dartanalyzer_cmd = '/home/leandro/Documentos/Softwares/dart-sdk/bin/dartan
 """"""""""""""""""""""""""""""""" Hotkeys para janelas no Vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " divide a janela horizontalmente 
-nmap <C-w>h <C-w>s 
+" nmap <C-w>h <C-w>s 
 " divide a janela verticalmente
 " nmap <C-w>v <C-w>v
-command VW vs
-command HW sp
+" command VW vs
+" command HW sp
 
 "Better window navigation
 nnoremap <C-j> <C-w>j
@@ -115,14 +115,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Open/Close NERDTree with tabs
-nmap nt <plug>NERDTreeTabsToggle<CR>
-
 " paste text from out of vim
-map cp "+gP<Esc>
+nmap cp i<Space><Esc>"+gP<Esc>x
 
 " open actual file in firefox brower
 command OpenFirefox :exe ':silent !firefox %'
+command OpenChrome :exe ':silent !google-chrome %'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" Neocomplete Configuration
@@ -220,3 +218,18 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 """"""""""""""""""""""""""""""""""" VERun Configs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VEMakeRun="main"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""" Dragvisuals configs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+runtime 'plugins/dragvisuals'
+vmap  <expr>  <LEFT>   DVB_Drag('left')                    
+vmap  <expr>  <RIGHT>  DVB_Drag('right')                   
+vmap  <expr>  <DOWN>   DVB_Drag('down')                    
+vmap  <expr>  <UP>     DVB_Drag('up')                      
+vmap  <expr>  D        DVB_Duplicate()                     
+                                                           
+" Remove any introduced trailing whitespace after moving...
+let g:DVB_TrimWS = 1  
+
+let g:vim_markdown_folding_disabled=1
