@@ -87,3 +87,12 @@ Plugin 'sollidsnake/verun'
 
 " mru
 Plugin 'mru.vim'
+
+" multiple cursors like sublime text
+Plugin 'terryma/vim-multiple-cursors'
+
+" vim shell
+Plugin 'Shougo/vimshell.vim'
+
+" commands to only visual block selections
+Plugin 'vis.vim'

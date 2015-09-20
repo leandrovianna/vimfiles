@@ -1,4 +1,4 @@
-deploy: link install-deps install-vundle install-plugins
+deploy: link install-deps install-vundle install-plugins install-font
 
 link:
 	echo "Linkando o .vimrc do repositorio para ~"
@@ -18,3 +18,9 @@ install-plugins:
 	vim +PluginInstall +qall
 	cd ~/.vim/bundle/vimproc.vim 
 	make
+
+install-font:
+	echo "Instalando a font Fantasque"
+	cd ~/.vim/
+	cp fonts/* ~/.fonts
+	ls ~/.fonts

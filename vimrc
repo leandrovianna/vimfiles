@@ -37,6 +37,9 @@ set title
 set mouse=c
 colorscheme molokai
 " autocmd BufEnter * silent! lcd %:p:h	" change the window local working directory for the actual file directory
+if has("gui_running")
+	set guifont=Fantasque\ Sans\ Mono\ 11
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""" EasyMotion Configuration
