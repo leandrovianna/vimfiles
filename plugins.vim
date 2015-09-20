@@ -95,4 +95,4 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/vimshell.vim'
 
 " commands to only visual block selections
-Plugin 'vis.vim'
+Plugin 'vis'
