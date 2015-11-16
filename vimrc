@@ -32,7 +32,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoread
-set wrap
+set nowrap
 set title
 set mouse=c
 colorscheme molokai

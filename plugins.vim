@@ -48,9 +48,6 @@ Plugin 'rstacruz/sparkup'
 " html5 auto complete simple
 Plugin 'othree/html5.vim'
 
-" js lint
-Plugin 'hallettj/jslint.vim'
-
 " css3 syntax
 Plugin 'hail2u/vim-css3-syntax'
 
@@ -99,3 +96,6 @@ Plugin 'vis'
 
 " move selections in visual block
 Plugin 'Mariappan/dragvisuals.vim'
+
+" visual increment -- increment a column
+Plugin 'triglav/vim-visual-increment'
