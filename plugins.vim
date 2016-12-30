@@ -10,18 +10,6 @@ Plugin 'kien/ctrlp.vim'
 " Syntastic -- syntax and errors checker for a lot of languages
 Plugin 'scrooloose/syntastic'
 
-" NERDTree -- very nice file browser
-" Plugin 'scrooloose/nerdtree'
-
-" NERDTree Tabs -- NERDTree in all tabs 
-" Plugin 'jistr/vim-nerdtree-tabs'
-
-" NERDTree git flags support
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
-
-" neocomplete -- autocomplete for vim
-Plugin 'Shougo/neocomplete.vim'
-
 " vim-pencil -- vim for prose
 Plugin 'reedes/vim-pencil'
 
@@ -44,12 +32,6 @@ Plugin 'Lokaltog/vim-easymotion'
 
 " Sparkup -- generate html elements with a simple notation (similiar to emmet)
 Plugin 'rstacruz/sparkup'
-
-" html5 auto complete simple
-Plugin 'othree/html5.vim'
-
-" css3 syntax
-Plugin 'hail2u/vim-css3-syntax'
 
 " CSSComb - css code organizer
 " Usage: :CSScomb
@@ -83,19 +65,17 @@ Plugin 'dannyob/quickfixstatus'
 Plugin 'sollidsnake/verun'
 
 " mru
+" recently open files
 Plugin 'mru.vim'
-
-" multiple cursors like sublime text
-Plugin 'terryma/vim-multiple-cursors'
-
-" vim shell
-Plugin 'Shougo/vimshell.vim'
-
-" commands to only visual block selections
-Plugin 'vis'
-
-" move selections in visual block
-Plugin 'Mariappan/dragvisuals.vim'
 
 " visual increment -- increment a column
 Plugin 'triglav/vim-visual-increment'
+
+" vim snippets
+Plugin 'SirVer/ultisnips'
+
+" snippet engine
+Plugin 'honza/vim-snippets'
+
+" open pdf file in vim
+Plugin 'rhysd/open-pdf.vim'

@@ -1,0 +1,11 @@
+snippet random1to100
+`!sh
+n=$RANDOM;
+let "n %= 100";
+let "n += 1";
+echo $n;`
+endsnippet
+
+snippet random
+`echo $RANDOM`
+endsnippet

@@ -1,0 +1,16 @@
+snippet basic "Basic Structure"
+#include <stdio.h>
+
+int main() {
+	${0}
+	return 0;
+}
+endsnippet
+
+snippet form "For Matrix"
+for (i = 0; i < ${1:M}; i++) {
+	for (j = 0; j < ${2:N}; j++) {
+		${0}
+	}
+}
+endsnippet
