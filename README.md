@@ -14,6 +14,11 @@ So, clone the repo:
 ```
 git clone https://github.com/leandrovianna/vimfiles.git ~/.vim
 ```
+Install necessary depedencies:
+
+```
+su -c "apt-get install build-essential git curl"
+```
 
 So just:
 ```
