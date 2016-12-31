@@ -22,5 +22,6 @@ install-plugins:
 install-font:
 	echo "Instalando a font Fantasque"
 	cd ~/.vim/
+	mkdir -p ~/.fonts
 	cp fonts/* ~/.fonts
 	ls ~/.fonts
