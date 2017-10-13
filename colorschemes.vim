@@ -1,14 +1,5 @@
-Plugin 'endel/vim-github-colorscheme'
-
-Plugin 'benjaminwhite/Benokai'
-
 Plugin 'tomasr/molokai'
-
-Plugin 'BusyBee'
-" Plugin 'vim-scripts/BusyBee'
-
-Plugin 'nelstrom/vim-mac-classic-theme'
-
-Plugin 'wesQ3/wombat.vim'
-
-Plugin 'romainl/Apprentice' 
+Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'zeis/vim-kolor'
+Plugin 'acarapetis/vim-colors-github'

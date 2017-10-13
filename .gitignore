@@ -39,3 +39,6 @@ bundle
 spell
 
 .netrwhist
+
+# sessions dir
+session

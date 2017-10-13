@@ -3,6 +3,7 @@ deploy: link install-deps install-vundle install-plugins install-font
 link:
 	echo "Linkando o .vimrc do repositorio para ~"
 	ln -s ~/.vim/vimrc ~/.vimrc
+	ln -s ~/.vim/gvimrc ~/.gvimrc
 
 install-deps:
 	echo "Instalando as dependencias (root)"

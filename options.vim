@@ -9,10 +9,21 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoread
-set wrap
+set nowrap
 set title
 set mouse=c
-colorscheme molokai
+set visualbell
+set errorbells
+
+" disable because I dont use Caps like Escape
+" au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
+" au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+""" colorscheme available
+" see colorschemes.vim
+
+colorscheme gruvbox
+execute 'set background=' . (strftime('%H') >= 18 ? 'dark' : 'light')
 
 """""""""""" EasyMotion Configuration
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -45,19 +56,27 @@ nmap <S-l> gt
 nmap <S-h> gT
 
 """""""""""""" Syntastic Config
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 1
+"""""""""""""" Plugin Removed
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 let g:syntastic_error_symbol = "E"
 let g:syntastic_warning_symbol = "W"
+
+" cpp 11 config
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
+" python
+let g:syntastic_python_checkers = ['pyflakes', 'pylint']
 
 """""""""""""" VIM-Arline Config
 set laststatus=2 " vim-airline status bar shows everytime
 " custom the status bar with Syntastic e Fugitive
 set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 """""""""""""" Dart Analyzer Config
@@ -78,9 +97,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " paste text from out of vim
-nmap cp i<Space><Esc>"+gP<Esc>x
+nmap Ep "+p
+" copy text from out of vim
+vmap Ey "+y
 
-map <CapsLock> <Esc>
+command CopyAllFile :exe 'normal ggVG"+y'
+
+" map <CapsLock> <Esc>
 
 " open actual file in firefox brower
 command OpenFirefox :exe ':silent !firefox %'
@@ -90,7 +113,7 @@ command OpenChrome :exe ':silent !google-chrome %'
 let g:vim_markdown_folding_disabled=1
 
 """""""""""" UltiSnips
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit="horizontal"
 
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
@@ -98,19 +121,14 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-let g:VECppAutoHeaders=1
-let g:VEGppArgs="-lm"
-
-set visualbell
-set errorbells
-
-au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
-au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+"""""""""""" VERun
+let w:VEGppArgs="-g -Wall -Wextra -Werror -Wfloat-equal -Winit-self"
+let w:VETerm="x-terminal-emulator -e"
 
 " open and explore folder
 fun CdEx(path)
-	exe ':cd ' . a:path
-	exe ':Ex '. a:path
+	exe ':Explore '. a:path
+	exe ':cd %:p:h'
 	exe ':pwd'
 endfun
 
@@ -119,10 +137,13 @@ command -nargs=1 -complete=file CdEx call CdEx(<f-args>)
 
 " generate random numbers
 fun Random(min, max)
-	exe ':py import random, vim'
-	exe ':py vim.current.line += str(random.randint('. a:min .','. a:max .'+1))'
+	exe ':py3 import random, vim'
+	exe ':py3 vim.current.line += str(random.randint('. a:min .','. a:max .'+1))'
 endfun
 
 command -nargs=* Random call Random(<f-args>)
 
+""" Neomake configs
+" When reading a buffer (after 1s), and when writing.
+call neomake#configure#automake('rw', 1000)
 

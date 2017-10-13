@@ -1,9 +1,9 @@
 snippet commentheader
 /* ***********************************************************************
     * Filename: `!p snip.rv = snip.fn`
-    * Date: ${0: `date`}
-    * Author (Programmer): ${1:Name} <${2:Email}>
-    * Description: ${3:Description}
+    * Date: ${1: `date`}
+    * Author (Programmer): ${2:Name} <${3:Email}>
+    * Description: ${4:Description}${0}
    *********************************************************************** */
 endsnippet
 
@@ -14,5 +14,37 @@ using namespace std;
 int main() {
 	${0}	
 	return 0;
+}
+endsnippet
+
+snippet cbasic
+//${1:Judge} - ${2:Problem Name} - ${3:Problem ID}
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	${0}
+	return 0;
+}
+endsnippet
+
+snippet for
+for (${1:int} ${2:i} = ${3:0}; $2 ${4:<} ${5:n}; $2${6:++})
+endsnippet
+
+snippet for2
+for (int ${1:i} = ${2:0}; $1 ${3:<} ${4:n}; $1${5:++})
+	for (int ${6:j} = ${7:0}; $6 ${8:<} ${9:m}; $6${10:++})
+endsnippet
+
+snippet memset
+memset(${1:array}, ${2:-1 or 0}, sizeof($1))
+endsnippet
+
+snippet testcase
+cin >> t;
+for (int ti = 0; ti < t; ti++) {
+	${0}
 }
 endsnippet
