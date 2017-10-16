@@ -55,22 +55,6 @@ nmap <C-S-Tab> gT
 nmap <S-l> gt
 nmap <S-h> gT
 
-"""""""""""""" Syntastic Config
-"""""""""""""" Plugin Removed
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol = "E"
-let g:syntastic_warning_symbol = "W"
-
-" cpp 11 config
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-
-" python
-let g:syntastic_python_checkers = ['pyflakes', 'pylint']
-
 """""""""""""" VIM-Arline Config
 set laststatus=2 " vim-airline status bar shows everytime
 " custom the status bar with Syntastic e Fugitive
@@ -78,9 +62,6 @@ set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-"""""""""""""" Dart Analyzer Config
-let g:dartanalyzer_cmd = $DARTANALYZER
 
 """""""""""" Hotkeys para janelas no Vim
 " divide a janela horizontalmente
@@ -113,9 +94,10 @@ command OpenChrome :exe ':silent !google-chrome %'
 let g:vim_markdown_folding_disabled=1
 
 """""""""""" UltiSnips
-let g:UltiSnipsEditSplit="horizontal"
+let g:UltiSnipsEditSplit="context"
 
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+" let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -147,3 +129,27 @@ command -nargs=* Random call Random(<f-args>)
 " When reading a buffer (after 1s), and when writing.
 call neomake#configure#automake('rw', 1000)
 
+" neomake maker for project with Makefile
+let g:neomake_make_maker = {
+			\ 'exe': 'make',
+			\ 'args': '',
+			\ 'errorformat': '%f:%l:%c: %m',
+			\ }
+
+let g:neomake_enabled_makers = ['make']
+
+" let g:neomake_cpp_enabled_makers = ['make', 'gcc'] 
+
+" change error and warning signs
+let g:neomake_warning_sign = {
+  \ 'text': 'W',
+  \ 'texthl': 'WarningMsg',
+  \ }
+let g:neomake_error_sign = {
+  \ 'text': 'E',
+  \ 'texthl': 'ErrorMsg',
+  \ }
+
+let g:neomake_logfile = '/tmp/neomake.log'
+
+""""""""""""""""""""""""""""""

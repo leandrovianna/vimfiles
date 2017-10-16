@@ -43,3 +43,6 @@ Plugin 'mhinz/vim-startify'
 
 " neomake - linting and make asynchronous
 Plugin 'neomake/neomake'
+
+" pack of snippets for UltiSnippets
+Plugin 'honza/vim-snippets'
