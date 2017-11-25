@@ -9,7 +9,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoread
-set nowrap
+set wrap
 set title
 set mouse=c
 set visualbell
@@ -23,7 +23,7 @@ set errorbells
 " see colorschemes.vim
 
 colorscheme gruvbox
-execute 'set background=' . (strftime('%H') >= 18 ? 'dark' : 'light')
+execute 'set background=' . (strftime('%H') >= 19 ? 'dark' : 'light')
 
 """""""""""" EasyMotion Configuration
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -153,3 +153,12 @@ let g:neomake_error_sign = {
 let g:neomake_logfile = '/tmp/neomake.log'
 
 """"""""""""""""""""""""""""""
+
+" gtd.vim config
+let g:gtd#dir = '~/notes'
+
+let g:gtd#review = [
+	\ '(!inbox + !scheduled-'.strftime("%Y%m%d").')',
+	\ '!todo @work',
+	\ '!waiting @work',
+	\ ]

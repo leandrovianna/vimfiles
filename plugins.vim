@@ -46,3 +46,12 @@ Plugin 'neomake/neomake'
 
 " pack of snippets for UltiSnippets
 Plugin 'honza/vim-snippets'
+
+" async build and tests for vim
+Plugin 'tpope/vim-dispatch'
+
+" Get Things Done (GTD) plugin for vim
+Plugin 'phb1/gtd.vim'
+
+" dart support plugins
+Plugin 'dart-lang/dart-vim-plugin'
