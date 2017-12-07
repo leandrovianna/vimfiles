@@ -55,3 +55,6 @@ Plugin 'phb1/gtd.vim'
 
 " dart support plugins
 Plugin 'dart-lang/dart-vim-plugin'
+
+" golang support
+Plugin 'fatih/vim-go'

@@ -15,9 +15,8 @@ set mouse=c
 set visualbell
 set errorbells
 
-" disable because I dont use Caps like Escape
-" au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
-" au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
+au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 """ colorscheme available
 " see colorschemes.vim
@@ -78,13 +77,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " paste text from out of vim
-nmap Ep "+p
+nmap <Leader>p "+p
 " copy text from out of vim
-vmap Ey "+y
+vmap <Leader>y "+y
 
 command CopyAllFile :exe 'normal ggVG"+y'
-
-" map <CapsLock> <Esc>
 
 " open actual file in firefox brower
 command OpenFirefox :exe ':silent !firefox %'
@@ -139,6 +136,7 @@ let g:neomake_make_maker = {
 let g:neomake_enabled_makers = ['make']
 
 " let g:neomake_cpp_enabled_makers = ['make', 'gcc'] 
+" let g:neomake_go_enabled_makers = ['']
 
 " change error and warning signs
 let g:neomake_warning_sign = {
@@ -158,7 +156,8 @@ let g:neomake_logfile = '/tmp/neomake.log'
 let g:gtd#dir = '~/notes'
 
 let g:gtd#review = [
-	\ '(!inbox + !scheduled-'.strftime("%Y%m%d").')',
+	\ '!inbox',
+	\ '-!done',
 	\ '!todo @work',
 	\ '!waiting @work',
 	\ ]
