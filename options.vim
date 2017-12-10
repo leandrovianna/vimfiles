@@ -135,18 +135,18 @@ let g:neomake_make_maker = {
 
 let g:neomake_enabled_makers = ['make']
 
-" let g:neomake_cpp_enabled_makers = ['make', 'gcc'] 
+" let g:neomake_cpp_enabled_makers = ['make', 'gcc']
 " let g:neomake_go_enabled_makers = ['']
 
 " change error and warning signs
 let g:neomake_warning_sign = {
-  \ 'text': 'W',
-  \ 'texthl': 'WarningMsg',
-  \ }
+			\ 'text': 'W',
+			\ 'texthl': 'WarningMsg',
+			\ }
 let g:neomake_error_sign = {
-  \ 'text': 'E',
-  \ 'texthl': 'ErrorMsg',
-  \ }
+			\ 'text': 'E',
+			\ 'texthl': 'ErrorMsg',
+			\ }
 
 let g:neomake_logfile = '/tmp/neomake.log'
 
@@ -156,8 +156,17 @@ let g:neomake_logfile = '/tmp/neomake.log'
 let g:gtd#dir = '~/notes'
 
 let g:gtd#review = [
-	\ '!inbox',
-	\ '-!done',
-	\ '!todo @work',
-	\ '!waiting @work',
-	\ ]
+			\ '!inbox',
+			\ '-!done',
+			\ '!todo @work',
+			\ '!waiting @work',
+			\ ]
+
+" removing trailing spaces
+
+function! TrimWhiteSpace()
+	%s/\s\+$//e
+endfunction
+
+" register when save file to removing trailing spaces
+autocmd FileType vim,c,cpp,php,ruby,python,javascript,java,golang,dart autocmd BufWritePre <buffer> :call TrimWhiteSpace()
