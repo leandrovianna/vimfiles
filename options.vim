@@ -24,6 +24,8 @@ au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 colorscheme gruvbox
 execute 'set background=' . (strftime('%H') >= 19 ? 'dark' : 'light')
 
+let mapleader=','
+
 """""""""""" EasyMotion Configuration
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
