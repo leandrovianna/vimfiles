@@ -9,7 +9,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoread
-set wrap
+set nowrap
 set title
 set mouse=c
 set visualbell
@@ -171,4 +171,10 @@ function! TrimWhiteSpace()
 endfunction
 
 " register when save file to removing trailing spaces
-autocmd FileType vim,c,cpp,php,ruby,python,javascript,java,golang,dart autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+autocmd FileType json,lua,vim,c,cpp,php,ruby,python,javascript,java,golang,dart autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+
+" vim-easy-align
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
+nmap <Leader>b :buffers<CR>

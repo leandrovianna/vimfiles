@@ -21,7 +21,7 @@ Plugin 'rstacruz/sparkup'
 " Usage: :CSScomb
 Plugin 'git://github.com/miripiruni/CSScomb-for-Vim.git'
 
-" tComment -- comment and uncomment FAST 
+" tComment -- comment and uncomment FAST
 " Usage: type gcc
 Plugin 'tComment'
 
@@ -58,3 +58,6 @@ Plugin 'dart-lang/dart-vim-plugin'
 
 " golang support
 Plugin 'fatih/vim-go'
+
+" vim-easy-align
+Plugin 'junegunn/vim-easy-align'
