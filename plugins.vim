@@ -14,13 +14,6 @@ Plugin 'tpope/vim-fugitive'
 " Easymotion -- jump around in document using \w \j \k \s{character}
 Plugin 'Lokaltog/vim-easymotion'
 
-" Sparkup -- generate html elements with a simple notation (similar to emmet)
-Plugin 'rstacruz/sparkup'
-
-" CSSComb - css code organizer
-" Usage: :CSScomb
-Plugin 'git://github.com/miripiruni/CSScomb-for-Vim.git'
-
 " tComment -- comment and uncomment FAST
 " Usage: type gcc
 Plugin 'tComment'
@@ -61,3 +54,19 @@ Plugin 'fatih/vim-go'
 
 " vim-easy-align
 Plugin 'junegunn/vim-easy-align'
+
+" preview a markdown file in browser
+" depends on markdown and xdotool
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" typescript support
+Plugin 'leafgarland/typescript-vim'
+
+" NERDTree, side directory tree
+Plugin 'scrooloose/nerdtree'
+
+" Jinja syntax highlighting and indentation
+Plugin 'lepture/vim-jinja'
+
+" Emmet, write HTML with CSS-like syntax
+Plugin 'mattn/emmet-vim'
