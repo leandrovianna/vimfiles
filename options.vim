@@ -5,9 +5,11 @@ set number
 set noai
 set autoindent
 set copyindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
 set autoread
 set nowrap
 set title
@@ -29,7 +31,6 @@ let mapleader=','
 """""""""""" EasyMotion Configuration
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
-" Obs.: <Leader> is by default the '/' key
 " use of w in easymotion
 nmap <Leader>w <Plug>(easymotion-w)
 
@@ -61,7 +62,6 @@ set laststatus=2 " vim-airline status bar shows everytime
 " custom the status bar with Syntastic e Fugitive
 set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 """""""""""" Hotkeys para janelas no Vim
@@ -105,6 +105,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 """""""""""" VERun
 let w:VEGppArgs="-g -Wall -Wextra -Werror -Wfloat-equal -Winit-self"
 let w:VETerm="x-terminal-emulator -e"
+""""""""""""""""""""""
 
 " open and explore folder
 fun CdEx(path)
@@ -171,10 +172,14 @@ function! TrimWhiteSpace()
 endfunction
 
 " register when save file to removing trailing spaces
-autocmd FileType json,lua,vim,c,cpp,php,ruby,python,javascript,java,golang,dart autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+autocmd FileType json,lua,vim,c,cpp,php,ruby,python,javascript,typescript,java,golang,dart autocmd BufWritePre <buffer> :call TrimWhiteSpace()
 
 " vim-easy-align
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
 nmap <Leader>b :buffers<CR>
+
+""" Indentation file-specific options
+autocmd Filetype cpp,c setlocal ts=4 sw=4 expandtab
+autocmd Filetype typescript,javascript,html,css setlocal ts=2 sw=2 expandtab

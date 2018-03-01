@@ -56,6 +56,7 @@ Plugin 'fatih/vim-go'
 Plugin 'junegunn/vim-easy-align'
 
 " preview a markdown file in browser
+" use: <Ctrl>p
 " depends on markdown and xdotool
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
