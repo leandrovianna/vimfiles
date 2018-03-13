@@ -92,6 +92,9 @@ command OpenChrome :exe ':silent !google-chrome %'
 """""""""""" Vim Markdown
 let g:vim_markdown_folding_disabled=1
 
+"""""""""""" Vim Markdown Preview
+let vim_markdown_preview_github=1
+
 """""""""""" UltiSnips
 let g:UltiSnipsEditSplit="context"
 
@@ -172,7 +175,8 @@ function! TrimWhiteSpace()
 endfunction
 
 " register when save file to removing trailing spaces
-autocmd FileType json,lua,vim,c,cpp,php,ruby,python,javascript,typescript,java,golang,dart autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+" autocmd FileType json,lua,vim,c,cpp,php,ruby,python,javascript,typescript,java,golang,dart,markdown autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+autocmd FileType * autocmd BufWritePre <buffer> :call TrimWhiteSpace()
 
 " vim-easy-align
 nmap ga <Plug>(EasyAlign)
@@ -183,3 +187,6 @@ nmap <Leader>b :buffers<CR>
 """ Indentation file-specific options
 autocmd Filetype cpp,c setlocal ts=4 sw=4 expandtab
 autocmd Filetype typescript,javascript,html,css setlocal ts=2 sw=2 expandtab
+
+""" Format json files
+com! FormatJSON !python -m json.tool

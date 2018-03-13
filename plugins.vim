@@ -15,7 +15,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 
 " tComment -- comment and uncomment FAST
-" Usage: type gcc
+" Usage: type gc{command}
 Plugin 'tComment'
 
 " Surround.vim -- surround text with htmls elements
@@ -71,3 +71,9 @@ Plugin 'lepture/vim-jinja'
 
 " Emmet, write HTML with CSS-like syntax
 Plugin 'mattn/emmet-vim'
+
+" json specific syntax, folding, warnings etc
+Plugin 'elzr/vim-json'
+
+" cream-capitalization
+Plugin 'cream-capitalization'
