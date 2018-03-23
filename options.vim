@@ -5,11 +5,13 @@ set number
 set noai
 set autoindent
 set copyindent
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 set smarttab
+
 set autoread
 set nowrap
 set title
@@ -23,8 +25,7 @@ au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 """ colorscheme available
 " see colorschemes.vim
 
-colorscheme gruvbox
-execute 'set background=' . (strftime('%H') >= 19 ? 'dark' : 'light')
+colorscheme vividchalk
 
 let mapleader=','
 
